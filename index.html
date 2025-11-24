@@ -3,183 +3,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Frayja: Privacy-First Messaging & File Transfer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Frayja Messaging – Sovereignty in the Post-Cloud Era</title>
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 2em; color: #222; background: #fafbfc; }
-    h1, h2, h3 { color: #1a237e; }
-    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
-    h2 { font-size: 1.5em; margin-top: 1.5em; }
-    h3 { font-size: 1.2em; margin-top: 1em; }
-    ul, ol { margin-left: 1.5em; }
-    .highlight { background: #e3f2fd; padding: 0.2em 0.5em; border-radius: 4px; }
-    table { border-collapse: collapse; width: 100%; margin: 1em 0; background: #fff; }
-    th, td { border: 1px solid #bdbdbd; padding: 0.7em; text-align: left; }
-    th { background: #e3f2fd; }
-    tr:nth-child(even) { background: #f5f5f5; }
-    .section { margin-bottom: 2em; }
-    .tagline { font-style: italic; color: #607d8b; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0a1124; color: #fff; margin: 0; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; background: #16213a; }
+    .logo { width: 140px; margin-bottom: 24px; display: block; }
+    h1 { color: #f1c40f; font-size: 2.8em; margin-bottom: 0.2em; }
+    h2 { color: #e63946; margin-top: 2em; }
+    .subtitle { color: #bfc9d1; font-size: 1.3em; margin-bottom: 2em; }
+    p, li { line-height: 1.7; }
+    .highlight { color: #e63946; font-weight: bold; }
+    .diagram { background: #23304a; color: #f1c40f; text-align: center; padding: 20px; margin: 20px 0; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1.5em; }
+    th, td { border: 1px solid #23304a; padding: 12px; text-align: left; }
+    th { background: #e63946; color: #fff; }
+    .footer { color: #bfc9d1; text-align: center; margin-top: 3em; font-size: 0.95em; }
+    @media (max-width: 600px) {
+      .container { padding: 20px 10px; }
+      .logo { width: 100px; }
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    UploadedImage0.jpg
+    <h1>Frayja Messaging</h1>
+    <div class="subtitle">Sovereign, privacy-first messaging and file transfer for the post-cloud era.</div>
 
-  <h1>Frayja: Privacy-First Messaging & File Transfer for the Post-Cloud Era</h1>
-  <p class="tagline">A sovereign, privacy-first platform for users who demand control and security.</p>
-
-  <section class="section">
-    <h2>Vision &amp; Purpose</h2>
+    <h2>Why Frayja Exists</h2>
+    <p>
+      We live in a <strong>post-cloud era</strong> where privacy is no longer optional—it’s essential. Centralised messaging platforms and email services have repeatedly failed to protect user data:
+    </p>
     <ul>
-      <li><span class="highlight">Sovereign, privacy-first platform</span> for messaging and file transfer</li>
-      <li>Leverages <strong>PKI</strong> and <strong>IPFS</strong></li>
-      <li>No phone numbers, no cloud sync, no metadata exposure</li>
-      <li><strong>Desktop-only experience</strong> for maximum user control</li>
-      <li>Mythic branding &amp; intuitive UX for accessible advanced security</li>
-      <li>Currently raising <strong>€2 million</strong> in pre-seed funding</li>
-      <li>Monetization via freemium and enterprise offerings</li>
+      <li><strong>WhatsApp breach (2025):</strong> Over <span class="highlight">3.5 billion phone numbers and profile data</span> exposed due to weak rate-limiting and scraping vulnerabilities.<sup>[Source]</sup></li>
+      <li><strong>TeleMessage hack:</strong> Signal and WhatsApp clones used by US officials were compromised, exposing archived messages and credentials.<sup>[Source]</sup></li>
+      <li><strong>Email vulnerabilities:</strong> SMTP still negotiates encryption in plaintext, making interception possible. Gmail and Yahoo have faced breaches and continue scanning inboxes for ads.<sup>[Source]</sup></li>
     </ul>
-  </section>
 
-  <section class="section">
-    <h2>Executive Q&amp;A Highlights</h2>
+    <h2>Frayja’s Purpose</h2>
+    <p>Frayja is a <strong>privacy-first messaging and file transfer platform</strong> designed for true sovereignty. Our mission is simple: <strong>give users complete control over their communications</strong>.</p>
     <ul>
-      <li><strong>Why Now?</strong> The shift to a post-cloud era makes privacy-first solutions essential. Frayja’s decentralized approach meets rising demand for sovereignty and security.</li>
-      <li><strong>Usability for All:</strong> Abstracts technical complexity—secure messaging and file transfer with simple, intuitive controls. Key generation and file signing are seamless and automatic.</li>
-      <li><strong>Desktop-Only Strategy:</strong> Avoids OS-level surveillance and app store constraints. Mobile clients may come later, but only if privacy can be guaranteed.</li>
-      <li><strong>Go-to-Market:</strong> Mythic branding, community-first engagement, and partnerships build momentum through clarity and storytelling.</li>
-      <li><strong>Team:</strong> Founder-led, with expertise in privacy architecture and branding. Plans to onboard a technical cofounder or studio partner with PKI, IPFS, and UX experience.</li>
-      <li><strong>Business Model:</strong> Freemium for personal use, Pro for encrypted team collaboration, and Enterprise licensing for sovereign infrastructure. Exploring tokenless staking and white-label licensing for privacy-first institutions.</li>
+      <li><strong>End-to-End PKI Encryption:</strong> Only intended recipients can decrypt messages.</li>
+      <li><strong>User-Held Keys:</strong> Private keys never leave your device.</li>
+      <li><strong>IPFS-Based Delivery:</strong> No central servers, no metadata leakage.</li>
+      <li><strong>Desktop-Only:</strong> Maximum control, no OS-level surveillance.</li>
+      <li><strong>Zero Third-Party Dependence:</strong> No reliance on proprietary infrastructure.</li>
     </ul>
-  </section>
 
-  <section class="section">
-    <h2>Key Features</h2>
-    <ul>
-      <li><strong>Decentralized Architecture:</strong> PKI + IPFS, no central server</li>
-      <li><strong>No Metadata Exposure:</strong> No phone numbers, no cloud sync</li>
-      <li><strong>Unified Messaging &amp; File Transfer:</strong> All-in-one platform</li>
-      <li><strong>Desktop-Only Control:</strong> Full local control, no mobile OS surveillance</li>
-      <li><strong>Privacy-Preserving Payments:</strong> Polygon, Rune Tokens</li>
-      <li><strong>Mythic Branding &amp; Intuitive UX:</strong> Easy for everyone</li>
-      <li><strong>Freemium &amp; Enterprise Options:</strong> Personal, pro, enterprise tiers</li>
-    </ul>
-  </section>
+    <h2>Competitor Comparison</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Signal / WhatsApp</th>
+        <th>Proton Drive / Keybase</th>
+        <th>Frayja</th>
+      </tr>
+      <tr>
+        <td>Phone number needed</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td><strong>No</strong></td>
+      </tr>
+      <tr>
+        <td>Cloud sync</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td><strong>No</strong></td>
+      </tr>
+      <tr>
+        <td>Unified messaging + file transfer</td>
+        <td>No</td>
+        <td>Partial</td>
+        <td><strong>Yes</strong></td>
+      </tr>
+      <tr>
+        <td>Sovereignty focus</td>
+        <td>Limited</td>
+        <td>Moderate</td>
+        <td><strong>Full</strong></td>
+      </tr>
+    </table>
 
-  <section class="section">
-    <h2>Competitive Analysis</h2>
-    <div style="overflow-x:auto;">
-      <table>
-        <tr>
-          <th>Feature</th>
-          <th>Frayja</th>
-          <th>Signal</th>
-          <th>Proton Drive</th>
-          <th>Keybase</th>
-        </tr>
-        <tr>
-          <td>Decentralisation</td>
-          <td>Full (PKI + IPFS, no central server)</td>
-          <td>Centralised servers, phone number required</td>
-          <td>Centralised, separate messaging/files</td>
-          <td>Centralised, owned by Zoom</td>
-        </tr>
-        <tr>
-          <td>Metadata Exposure</td>
-          <td>Minimal (no phone numbers, no cloud)</td>
-          <td>Requires phone number, cloud sync</td>
-          <td>Metadata separated, not unified</td>
-          <td>Links social accounts, some metadata</td>
-        </tr>
-        <tr>
-          <td>Unified Platform</td>
-          <td>Messaging + file transfer in one</td>
-          <td>Messaging only</td>
-          <td>Messaging and file workflows separate</td>
-          <td>Messaging + file sharing</td>
-        </tr>
-        <tr>
-          <td>User Control</td>
-          <td>Desktop-only, full local control</td>
-          <td>Mobile/desktop, some OS-level exposure</td>
-          <td>Mobile/desktop, cloud-based</td>
-          <td>Multi-device, less forward secrecy</td>
-        </tr>
-        <tr>
-          <td>Branding/UX</td>
-          <td>Mythic, privacy-first, intuitive</td>
-          <td>Simple, privacy-focused</td>
-          <td>Professional, privacy-focused</td>
-          <td>Technical, less user-friendly</td>
-        </tr>
-        <tr>
-          <td>Monetisation</td>
-          <td>Freemium, enterprise, white-label, Polygon/Rune payments</td>
-          <td>Free, donation-based</td>
-          <td>Freemium, paid tiers</td>
-          <td>Free, but owned by Zoom</td>
-        </tr>
-      </table>
-    </div>
-  </section>
+    <div class="diagram">[Architecture Diagram Placeholder: PKI + IPFS Flow]</div>
+    <div class="diagram">[Business Model Funnel Placeholder]</div>
 
-  <section class="section">
-    <h2>Payment System</h2>
-    <ul>
-      <li><strong>Polygon (MATIC):</strong> Fast, low-fee payments for subscriptions and upgrades, enabling global access without banking barriers.</li>
-      <li><strong>Rune Tokens:</strong> Community staking for premium features, governance, and early access—no KYC or centralized account management.</li>
-      <li>Frayja’s payment system is as privacy-preserving as its core architecture.</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Security Trends &amp; Real-World Risks</h2>
-    <ul>
-      <li><strong>Recent Messaging App Hacks:</strong> High-profile breaches in 2025 (WhatsApp, Signal, Apple Messages, Android apps) highlight the vulnerabilities of centralized platforms and the need for sovereign, privacy-first solutions.</li>
-      <li><strong>Email Risks:</strong> Email remains insecure, with major breaches and credential leaks exposing sensitive data. Organizations often fail to implement proper encryption and access controls.</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Who Needs Frayja?</h2>
-    <ul>
-      <li>Privacy advocates &amp; journalists</li>
-      <li>Human rights organizations</li>
-      <li>Enterprise teams in regulated industries</li>
-      <li>Developers &amp; technologists</li>
-    </ul>
-  </section>
-
-  <section class="section">
     <h2>Business Model</h2>
+    <p>Frayja’s monetisation strategy ensures sustainability without compromising privacy:</p>
     <ul>
-      <li><strong>Freemium Structure:</strong>
-        <ul>
-          <li>Free tier for personal use</li>
-          <li>Pro tier for encrypted team collaboration</li>
-          <li>Enterprise licensing for organizations needing sovereign infrastructure</li>
-        </ul>
-      </li>
-      <li><strong>Monetization Channels:</strong>
-        <ul>
-          <li>Subscription upgrades via privacy-preserving payments (Polygon and Rune Tokens)</li>
-          <li>White-label licensing for privacy-first institutions</li>
-          <li>Tokenless staking for premium features and governance participation</li>
-        </ul>
-      </li>
-      <li><strong>Revenue Allocation (Pre-seed Funding):</strong>
-        <ul>
-          <li>€1 million for technical development</li>
-          <li>€400,000 for branding and content</li>
-          <li>€300,000 for go-to-market and partnerships</li>
-          <li>€300,000 for legal and advisory support</li>
-        </ul>
-      </li>
-      <li><strong>Target Customers:</strong> Privacy advocates, journalists, human rights organizations, regulated enterprise teams, developers, and technologists</li>
+      <li><strong>Freemium Tier:</strong> Free for personal use.</li>
+      <li><strong>Pro Tier:</strong> Secure team collaboration.</li>
+      <li><strong>Enterprise Licensing:</strong> Sovereign infrastructure for organisations.</li>
+      <li><strong>Future:</strong> Tokenless staking and white-label solutions for privacy-first institutions.</li>
     </ul>
-  </section>
 
-  <section class="section">
-    <h2>Conclusion</h2>
-    <p>Centralized messaging and email platforms are increasingly risky. Frayja’s decentralized, cryptographically secure, and user-sovereign approach offers a timely solution for those who refuse to compromise on privacy.</p>
-  </section>
+    <h2>Branding & Identity</h2>
+    <p>Frayja’s design language reflects <strong>strength, independence, and clarity</strong>:</p>
+    <ul>
+      <li><strong>Colours:</strong> Deep navy (#0a1124), Mythic red (#e63946), Gold accents (#f1c40f).</li>
+      <li><strong>Typography:</strong> Modern sans-serif for readability and trust.</li>
+      <li><strong>Logo:</strong> A symbol of sovereignty and resilience.</li>
+    </ul>
 
+    <h2>Call to Action</h2>
+    <p>
+      <strong>Download Frayja:</strong> Available for desktop only.<br>
+      <strong>Join the Community:</strong> Advocate for sovereignty.<br>
+      <strong>Contribute on GitHub:</strong> Help shape the future of privacy-first communication.
+    </p>
+
+    <div class="footer">
+      &copy; 2025 Frayja. Privacy is a right—not a feature.
+    </div>
+  </div>
 </body>
 </html>
