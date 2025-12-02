@@ -5,29 +5,73 @@
   <meta charset="UTF-8">
   <title>Frayja: Privacy-First Messaging & File Transfer</title>
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #222; background: #fafbfc; }
-    header { background: #1a237e; color: #fff; padding: 1em 0; text-align: center; }
-    nav { background: #283593; padding: 0.5em 0; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-    nav li { margin: 0 1em; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; font-size: 1.1em; }
-    nav a:hover { text-decoration: underline; }
-    .logo { max-width: 160px; margin-bottom: 0.5em; }
-    main { max-width: 900px; margin: 2em auto; padding: 2em; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #e3e3e3; }
-    h1, h2, h3 { color: #1a237e; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #fff;
+      background: #1a237e;
+    }
+    header {
+      background: #1a237e;
+      color: #fff;
+      padding: 2em 0 1em 0;
+      text-align: center;
+    }
+    nav {
+      background: #283593;
+      padding: 0.5em 0;
+      box-shadow: 0 2px 8px #1113;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0 1em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #90caf9;
+      text-decoration: underline;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 1em auto;
+      max-width: 160px;
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #22307a;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #1115;
+    }
+    h1, h2, h3 { color: #90caf9; }
     h1 { font-size: 2.2em; margin-bottom: 0.2em; }
     h2 { font-size: 1.5em; margin-top: 1.5em; }
     h3 { font-size: 1.2em; margin-top: 1em; }
     ul, ol { margin-left: 1.5em; }
-    table { border-collapse: collapse; width: 100%; margin: 1em 0; background: #fff; }
-    th, td { border: 1px solid #bdbdbd; padding: 0.7em; text-align: left; }
-    th { background: #e3f2fd; }
-    tr:nth-child(even) { background: #f5f5f5; }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; background: #22307a; color: #fff; }
+    th, td { border: 1px solid #90caf9; padding: 0.7em; text-align: left; }
+    th { background: #1a237e; color: #90caf9; }
+    tr:nth-child(even) { background: #24316a; }
     .section { margin-bottom: 2em; }
-    .tagline { font-style: italic; color: #607d8b; }
-    .money { color: #388e3c; font-weight: bold; }
-    .quote { font-style: italic; color: #455a64; margin: 1em 0; }
+    .tagline { font-style: italic; color: #b3e5fc; }
+    .money { color: #80cbc4; font-weight: bold; }
+    .quote { font-style: italic; color: #b3e5fc; margin: 1em 0; }
     .img-center { display: block; margin: 0 auto 1em auto; }
+    .svg-img { display: block; margin: 1.5em auto 1em auto; }
     @media (max-width: 600px) {
       main { padding: 1em; }
       nav ul { flex-direction: column; }
@@ -38,7 +82,11 @@
 <body>
 
   <header>
-    <imges/frayja-logo.png
+    <!-- Frayja Logo SVG (replace with your real logo if available) -->
+    <svg class="logo" viewBox="0 0 120 40">
+      <circle cx="20" cy="20" r="18" fill="#90caf9" />
+      <text x="45" y="27" font-size="24" fill="#90caf9" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Frayja</text>
+    </svg>
     <h1>Frayja: Privacy-First Messaging & File Transfer</h1>
     <p class="tagline">A sovereign, privacy-first platform for users who demand control and security.</p>
   </header>
@@ -61,7 +109,12 @@
   <main>
     <section class="section" id="vision">
       <h2>Vision &amp; Purpose</h2>
-      images/vision.jpg
+      <!-- Vision SVG Illustration -->
+      <svg class="svg-img" width="120" height="60" viewBox="0 0 120 60">
+        <ellipse cx="60" cy="30" rx="55" ry="25" fill="#90caf9" opacity="0.2"/>
+        <circle cx="60" cy="30" r="18" fill="#90caf9" opacity="0.6"/>
+        <circle cx="60" cy="30" r="8" fill="#fff" opacity="0.8"/>
+      </svg>
       <p>
         Frayja is built on the conviction that <strong>privacy is a fundamental human right</strong> and that digital sovereignty is essential in the post-cloud era. As centralized platforms increasingly expose user metadata, communications, and files to surveillance and commercial exploitation, Frayja offers a radically different approach: empowering users with true control over their digital lives.
       </p>
@@ -80,6 +133,11 @@
 
     <section class="section" id="qa">
       <h2>Executive Q&amp;A Highlights</h2>
+      <!-- Q&A SVG Illustration -->
+      <svg class="svg-img" width="120" height="60" viewBox="0 0 120 60">
+        <rect x="10" y="10" width="100" height="40" rx="10" fill="#90caf9" opacity="0.2"/>
+        <text x="60" y="38" text-anchor="middle" font-size="32" fill="#90caf9" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Q&A</text>
+      </svg>
       <ul>
         <li><strong>Why Now?</strong> The shift to a post-cloud era makes privacy-first solutions essential. Frayja’s decentralized approach meets rising demand for sovereignty and security.</li>
         <li><strong>Usability for All:</strong> Frayja abstracts technical complexity—users enjoy secure messaging and file transfer with simple, intuitive controls. Key generation and file signing are seamless and automatic.</li>
@@ -93,7 +151,12 @@
 
     <section class="section" id="features">
       <h2>Key Features</h2>
-      images/features.jpg
+      <!-- Features SVG Illustration -->
+      <svg class="svg-img" width="120" height="60" viewBox="0 0 120 60">
+        <rect x="20" y="20" width="80" height="20" rx="10" fill="#90caf9" opacity="0.2"/>
+        <circle cx="40" cy="30" r="8" fill="#90caf9" opacity="0.7"/>
+        <circle cx="80" cy="30" r="8" fill="#90caf9" opacity="0.7"/>
+      </svg>
       <ul>
         <li><strong>Decentralized Architecture:</strong> PKI + IPFS, no central server</li>
         <li><strong>No Metadata Exposure:</strong> No phone numbers, no cloud sync</li>
@@ -110,6 +173,12 @@
 
     <section class="section" id="competitive">
       <h2>Competitive Analysis</h2>
+      <!-- Competitive SVG Illustration -->
+      <svg class="svg-img" width="120" height="60" viewBox="0 0 120 60">
+        <rect x="10" y="20" width="100" height="20" rx="10" fill="#90caf9" opacity="0.2"/>
+        <rect x="30" y="10" width="20" height="40" rx="5" fill="#90caf9" opacity="0.5"/>
+        <rect x="70" y="10" width="20" height="40" rx="5" fill="#90caf9" opacity="0.5"/>
+      </svg>
       <div style="overflow-x:auto;">
         <table>
           <tr>
@@ -167,7 +236,12 @@
 
     <section class="section" id="payment">
       <h2>Payment System</h2>
-      images/payment.jpg
+      <!-- Payment SVG Illustration -->
+      <svg class="svg-img" width="120" height="60" viewBox="0 0 120 60">
+        <rect x="20" y="20" width="80" height="20" rx="10" fill="#90caf9" opacity="0.2"/>
+        <circle cx="40" cy="30" r="8" fill="#fff" opacity="0.8"/>
+        <circle cx="80" cy="30" r="8" fill="#fff" opacity="0.8"/>
+      </svg>
       <ul>
         <li>
           <strong>Privacy-Preserving Architecture:</strong>
@@ -216,53 +290,6 @@
 
     <section class="section" id="security">
       <h2>Security Trends &amp; Real-World Risks</h2>
-      images/security.jpg
-      <ul>
-        <li><strong>Recent Messaging App Hacks:</strong> High-profile breaches in 2025 (WhatsApp, Signal, Apple Messages, Android apps) highlight the vulnerabilities of centralized platforms and the need for sovereign, privacy-first solutions.</li>
-        <li><strong>Email Risks:</strong> Email remains insecure, with major breaches and credential leaks exposing sensitive data. Organizations often fail to implement proper encryption and access controls.</li>
-        <li><strong>Regulatory Pressure:</strong> Increasing global regulations demand robust privacy and data sovereignty for organizations.</li>
-        <li><strong>Human Rights:</strong> Journalists and activists face surveillance and censorship, making secure, decentralized communication essential.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="audience">
-      <h2>Who Needs Frayja?</h2>
-      <imges/audience.jpg
-      <ul>
-        <li>Privacy advocates &amp; journalists</li>
-        <li>Human rights organizations</li>
-        <li>Enterprise teams in regulated industries</li>
-        <li>Developers &amp; technologists</li>
-        <li>NGOs and non-profits requiring secure, sovereign communications</li>
-        <li>Government agencies seeking compliance and control</li>
-        <li>Individual users seeking advanced privacy</li>
-      </ul>
-    </section>
-
-    <section class="section" id="business">
-      <h2>Business Model</h2>
-      images/business.jpg
-      <ul>
-        <li><strong>Personal License (Paid):</strong> Individuals can purchase a personal-use license for secure messaging and file transfer, with full access to Frayja’s privacy-first features and updates. This option is designed for privacy-conscious users who want robust protection without enterprise complexity.</li>
-        <li><strong>Enterprise Licensing:</strong> Custom deployments for organizations needing sovereign infrastructure and compliance.</li>
-        <li><strong>White-label Solutions:</strong> Tailored branding and integration for privacy-first institutions.</li>
-        <li><strong>Partnerships:</strong> Strategic alliances with NGOs, technology partners, and government agencies.</li>
-        <li><strong>Consulting &amp; Integration:</strong> Professional services for onboarding, compliance, and workflow integration.</li>
-        <li><strong>Revenue Allocation (Pre-seed Funding):</strong>
-          <ul>
-            <li>€1 million for technical development</li>
-            <li>€400,000 for branding and content</li>
-            <li>€300,000 for go-to-market and partnerships</li>
-            <li>€300,000 for legal and advisory support</li>
-          </ul>
-        </li>
-        <li><strong>Target Customers:</strong> Privacy advocates, journalists, human rights organizations, regulated enterprise teams, developers, technologists, NGOs, government agencies, and individual users seeking advanced privacy.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="roadmap">
-      <h2>Roadmap &amp; Future Vision</h2>
-      images/roadmap.jpg
-      <ul>
-        <li>Launch MVP and onboard initial enterprise clients</li>
-        <li>Expand integrations with compliance and workflow tools
+      <!-- Security SVG Illustration -->
+      <svg class="svg-img" width="120" height="60" viewBox="0 0 120 60">
+        <ellipse cx="60" cy="30
