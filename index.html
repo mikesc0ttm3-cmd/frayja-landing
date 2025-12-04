@@ -27,23 +27,26 @@
       line-height: 1.7;
     }
 
+    /* Header layout: logo left, fills header height */
     header {
-      background: #3652F6; /* Cipher Blue */;
+      background: #3652F6; /* Cipher Blue */
       color: var(--white);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      position: relative;
-    }
-    header .brand {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      padding: 0 2rem;     /* horizontal padding only */
+      height: 100px;       /* header depth */
     }
+
     header img.logo {
-      height: 64px;
+      height: 100%;        /* fill header height */
+      width: auto;         /* keep aspect ratio */
+      margin-right: 1rem;
     }
+
+    .header-text {
+      flex: 1;
+    }
+
     header h1 {
       margin: 0;
       font-weight: 700;
@@ -52,19 +55,12 @@
       font-family: 'IBM Plex Sans', sans-serif;
       letter-spacing: 0.2px;
     }
+
     header p.subtitle {
       margin: 0.25rem 0 0;
       color: var(--white);
       opacity: 0.9;
     }
-
-    .logo {
-  width: 60px;   /* set desired width */
-  height: auto;   /* keeps proportions */
-  background-color: #F4A430; /* Rune Gold */
-  padding: 1px;
-  border-radius: 1px;
-}
 
     .container {
       max-width: 1000px;
@@ -143,6 +139,7 @@
       opacity: 0.18;
     }
 
+    /* Footer */
     footer {
       background: var(--ice);
       text-align: center;
@@ -150,7 +147,8 @@
       margin-top: 1rem;
     }
     footer img.logo {
-      height: 40px;
+      height: 40px;   /* fixed height */
+      width: auto;    /* keep proportions */
       opacity: 0.75;
       margin-bottom: 0.5rem;
     }
@@ -167,8 +165,16 @@
 
     /* Small screens */
     @media (max-width: 640px) {
+      header {
+        flex-direction: column;   /* stack logo above text */
+        height: auto;             /* let header expand */
+        padding: 1rem;
+      }
+      header img.logo {
+        height: 60px;             /* smaller logo on mobile */
+        margin: 0 0 0.5rem 0;
+      }
       header h1 { font-size: 1.5rem; }
-      header img.logo { height: 52px; }
       section.card { padding: 1.25rem; }
     }
   </style>
@@ -177,11 +183,11 @@
 
   <!-- Header with logo -->
   <header>
-    <div class="brand">
-            <img src="images/frayja-logo .png" alt="Frayja Logo" class="logo">
+    <img src="images/frayja-logo.png" alt="Frayja Logo" class="logo">
+    <div class="header-text">
       <h1>Frayja: Privacy-First Messaging & File Transfer</h1>
+      <p class="subtitle">For the Post-Cloud Era</p>
     </div>
-    <p class="subtitle">For the Post-Cloud Era</p>
   </header>
 
   <main class="container">
@@ -200,7 +206,7 @@
       </ul>
       <div class="quote">
         Frayja’s purpose is to empower users to reclaim control, foster trust, and build a future where privacy is the default—not the exception.
-        <img class="wm" src="frayja-logo.png" alt="Frayja watermark">
+        <img class="wm" src="images/frayja-logo.png" alt="Frayja watermark">
       </div>
     </section>
 
@@ -302,7 +308,7 @@
       </ul>
       <div class="quote">
         Frayja’s payment system is as privacy-preserving as its core architecture.
-      <img src="images/frayja-logo.png" alt="Frayja Logo">
+        <img src="images/frayja-logo.png" alt="Frayja Logo">
       </div>
     </section>
 
@@ -359,7 +365,7 @@
 
   <!-- Footer with logo -->
   <footer>
-     <img src="images/frayja-logo .png" alt="Frayja Logo" class="logo">
+    <img src="images/frayja-logo.png" alt="Frayja Logo" class="logo">
     <div>&copy; 2025 Frayja. All rights reserved.</div>
   </footer>
 
