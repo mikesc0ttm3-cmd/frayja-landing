@@ -60,10 +60,19 @@
     }
 
     header p.subtitle {
-      margin: 0.25rem 0 0;
-      color: var(--white);
-      opacity: 0.9;
-    }
+  margin: 0.25rem 0 0;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+/* 👇 Insert these new rules right here */
+main.container {
+  margin-top: 0; /* remove default gap */
+}
+
+main.container section.card:first-of-type {
+  margin-top: 0.75rem; /* slight buffer between header and first card */
+}
 
     .container {
       max-width: 1000px;
