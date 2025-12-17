@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Explore Frayja’s privacy-first blog on secure messaging, metadata-free file transfer, and intentional communication.">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frayja Blog | Privacy-First Messaging & Secure File Transfer</title>
+  <meta name="description" content="Explore Frayja’s privacy-first blog on secure messaging, metadata-free file transfer, and intentional communication.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://frayja.ai/blog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
   <meta property="og:title" content="Frayja Blog | Privacy-First Messaging & Secure File Transfer">
   <meta property="og:description" content="Learn how Frayja protects your privacy with metadata-free communication and secure transfers.">
   <meta property="og:image" content="https://frayja.ai/assets/preview.png">
   <meta property="og:url" content="https://frayja.ai/blog">
+  <meta property="og:site_name" content="Frayja">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-
-  <title>Frayja Blog | Privacy-First Messaging & Secure File Transfer</title>
-
-  <!-- Fonts -->
-  <link hre<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Frayja Blog</title>
+  <meta name="twitter:title" content="Frayja Blog | Privacy-First Messaging & Secure File Transfer">
+  <meta name="twitter:description" content="Learn how Frayja protects your privacy with metadata-free communication and secure transfers.">
+  <meta name="twitter:image" content="https://frayja.ai/assets/preview.png">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@600;700&display=swap" rel="stylesheet">
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "headline": "Frayja Blog | Privacy-First Messaging & Secure File Transfer",
+    "description": "Explore Frayja’s privacy-first blog on secure messaging, metadata-free file transfer, and intentional communication.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Instanton Ltd",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://frayja.ai/assets/logo.png"
+      }
+    },
+    "url": "https://frayja.ai/blog",
+    "image": "https://frayja.ai/assets/preview.png"
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGSPXJQRDD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KGSPXJQRDD');
+  </script>
+
+  <!-- Styles -->
   <style>
     :root {
       --midnight: #140F2B;   /* Midnight Blue */
@@ -30,9 +65,7 @@
       --cipher:   #3652F6;   /* Cipher Blue */
       --white:    #FFFFFF;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       background: var(--ice);
@@ -43,27 +76,22 @@
 
     /* Header layout: logo left, fills header height */
     header {
-      background: #140F2B; /* Midnight Blue */
+      background: #140F2B;
       color: var(--signal);
       display: flex;
       align-items: center;
-      padding: 2rem 2rem;   /* increase vertical padding */
-      height: 300px;          /* increase header depth */
+      padding: 2rem 2rem;
+      height: 300px;
     }
-
     header img.logo {
-      height: 100%;        /* fill header height */
-      width: auto;         /* keep aspect ratio */
+      height: 100%;
+      width: auto;
       margin-right: 1rem;
     }
-
-   .header-text {
-      flex: 1;               /* take remaining space */
-      text-align: center;    /* center the text horizontally */
-}
-  
+    .header-text {
+      flex: 1;
+      text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-weight: 700;
@@ -72,28 +100,21 @@
       font-family: 'IBM Plex Sans', sans-serif;
       letter-spacing: 0.2px;
     }
-
     header p.subtitle {
-  margin: 0.25rem 0 0;
-  color: var(--white);
-  opacity: 0.9;
-}
+      margin: 0.25rem 0 0;
+      color: var(--white);
+      opacity: 0.9;
+    }
 
-/* 👇 Insert these new rules right here */
-main.container {
-  margin-top: 0; /* remove default gap */
-}
-
-main.container section.card:first-of-type {
-  margin-top: 0.75rem; /* slight buffer between header and first card */
-}
+    /* Layout spacing adjustments */
+    main.container { margin-top: 0; }
+    main.container section.card:first-of-type { margin-top: 0.75rem; }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 1rem;
     }
-
     section.card {
       background: var(--white);
       border-radius: 12px;
@@ -102,7 +123,6 @@ main.container section.card:first-of-type {
       margin: 1rem 0;
       position: relative;
     }
-
     h2 {
       margin-top: 0;
       font-family: 'IBM Plex Sans', sans-serif;
@@ -116,9 +136,7 @@ main.container section.card:first-of-type {
       padding-left: 0;
       margin: 1rem 0 0;
     }
-    ul.list li {
-      margin: 0.5rem 0;
-    }
+    ul.list li { margin: 0.5rem 0; }
     ul.list li strong {
       color: var(--cipher);
       font-weight: 600;
@@ -130,9 +148,13 @@ main.container section.card:first-of-type {
       border: 1px solid var(--ice);
       margin-top: 1rem;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    table { width: 100%; border-collapse: collapse; }
+    caption {
+      caption-side: top;
+      padding: 0.5rem;
+      font-weight: 600;
+      color: #333;
+      text-align: left;
     }
     thead th {
       background: var(--midnight);
@@ -145,9 +167,7 @@ main.container section.card:first-of-type {
       padding: 0.75rem;
       border-bottom: 1px solid var(--ice);
     }
-    tbody tr:nth-child(even) {
-      background: #F9FAFB;
-    }
+    tbody tr:nth-child(even) { background: #F9FAFB; }
 
     .quote {
       border-left: 4px solid var(--rune);
@@ -164,67 +184,58 @@ main.container section.card:first-of-type {
       height: 28px;
       opacity: 0.18;
     }
-.card .quote .logo {
-  width: 50px;   /* adjust size */
-  height: auto;   /* keep proportions */
-  display: block;
-  margin: 0 auto; /* centers the logo */
-}
+    .card .quote .logo {
+      width: 50px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Contact */
     #contact {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-#contact h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-#contact label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #444;
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-#contact button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background: #007acc;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#contact button:hover {
-  background: #005fa3;
-}
-
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    #contact h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    .form-group { margin-bottom: 1rem; }
+    #contact label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #444;
+    }
+    #contact input,
+    #contact textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    #contact button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #contact button:hover { background: #005fa3; }
 
     /* Footer */
     footer {
@@ -234,12 +245,11 @@ main.container section.card:first-of-type {
       margin-top: 1rem;
     }
     footer img.logo {
-      height: 40px;   /* fixed height */
-      width: auto;    /* keep proportions */
+      height: 40px;
+      width: auto;
       opacity: 0.75;
       margin-bottom: 0.5rem;
     }
-
     a {
       color: var(--signal);
       text-decoration: none;
@@ -253,43 +263,31 @@ main.container section.card:first-of-type {
     /* Small screens */
     @media (max-width: 640px) {
       header {
-        flex-direction: column;   /* stack logo above text */
-        height: auto;             /* let header expand */
+        flex-direction: column;
+        height: auto;
         padding: 1rem;
       }
       header img.logo {
-        height: 60px;             /* smaller logo on mobile */
+        height: 60px;
         margin: 0 0 0.5rem 0;
       }
       header h1 { font-size: 1.5rem; }
       section.card { padding: 1.25rem; }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KGSPXJQRDD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KGSPXJQRDD');
-</script>
 </head>
 <body>
 
   <!-- Header with logo -->
-<header>
- <img src="images/frayja-logo .png" alt="Frayja Logo" class="logo">
-  <div class="header-text">
-   <h1>Frayja Blog: Privacy-First Communication</h1>
-
-    <p class="subtitle">For the Post-Cloud Era</p>
-  </div>
-</header>
-
+  <header>
+    <img src="images/frayja-logo .png" alt="Frayja privacy-first communication logo" class="logo" loading="lazy">
+    <div class="header-text">
+      <h1>Frayja Blog: Privacy-First Communication</h1>
+      <p class="subtitle">For the Post-Cloud Era</p>
+    </div>
+  </header>
 
   <main class="container">
-
     <!-- Vision & Purpose -->
     <section class="card">
       <h2>Vision & Purpose</h2>
@@ -304,7 +302,7 @@ main.container section.card:first-of-type {
       </ul>
       <div class="quote">
         Frayja’s purpose is to empower users to reclaim control, foster trust, and build a future where privacy is the default—not the exception.
-        <img class="wm" src="images/frayja-logo.png" alt="Frayja watermark">
+        <img class="wm" src="images/frayja-logo.png" alt="Frayja watermark logo" loading="lazy">
       </div>
     </section>
 
@@ -325,38 +323,40 @@ main.container section.card:first-of-type {
     <section class="card">
       <h2>Key Features</h2>
       <ul class="list">
-        <li><strong>Decentralized Architecture:</strong> PKI + IPFS, no central server</li>
+        <li><strong>Decentralized Architecture:</strong> <a href="/blog/pki-encryption">PKI</a> + <a href="/blog/ipfs-storage">IPFS</a>, no central server</li>
         <li><strong>No Metadata Exposure:</strong> No phone numbers, no cloud sync</li>
         <li><strong>Unified Messaging & File Transfer:</strong> All-in-one platform</li>
         <li><strong>Desktop-Only Control:</strong> Full local control, no mobile OS surveillance</li>
-        <li><strong>Privacy-Preserving Payments:</strong> Polygon, Rune Tokens</li>
+        <li><strong>Privacy-Preserving Payments:</strong> <a href="/blog/polygon-payments">Polygon</a>, <a href="/blog/rune-tokens">Rune Tokens</a></li>
         <li><strong>Mythic Branding & Intuitive UX:</strong> Easy for everyone</li>
         <li><strong>Freemium & Enterprise Options:</strong> Personal, pro, enterprise tiers</li>
       </ul>
     </section>
-    
-   <!-- Architecture -->
-  <section class="card">
-    <h2>🏗️ Architecture Overview</h2>
-    <div style="display:flex; flex-direction:column; align-items:center; margin:2em 0;">
-      <img src="frayja-architecture.png" 
-           alt="Frayja Secure Architecture Diagram" 
-           style="max-width:80%; height:auto; border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-    </div>
-    <h3>Key Features</h3>
-    <ul>
-      <li>End-to-end PKI encryption</li>
-      <li>IPFS decentralized file storage</li>
-      <li>Verified peer-to-peer delivery</li>
-      <li>Desktop-only by design for maximum sovereignty</li>
-    </ul>
-</section>
+
+    <!-- Architecture -->
+    <section class="card">
+      <h2>🏗️ Architecture Overview</h2>
+      <div style="display:flex; flex-direction:column; align-items:center; margin:2em 0;">
+        <img src="frayja-architecture-diagram.png"
+             alt="Frayja secure architecture diagram showing PKI and IPFS integration"
+             loading="lazy"
+             style="max-width:80%; height:auto; border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+      </div>
+      <h3>Key Features</h3>
+      <ul>
+        <li><a href="/blog/pki-encryption">End-to-end PKI encryption</a></li>
+        <li><a href="/blog/ipfs-storage">IPFS decentralized file storage</a></li>
+        <li>Verified peer-to-peer delivery</li>
+        <li>Desktop-only by design for maximum sovereignty</li>
+      </ul>
+    </section>
 
     <!-- Competitive Analysis -->
     <section class="card">
       <h2>Competitive Analysis</h2>
       <div class="table-wrap">
         <table>
+          <caption>Comparison of Frayja vs Signal, Proton Drive, and Keybase</caption>
           <thead>
             <tr>
               <th>Feature</th>
@@ -414,62 +414,41 @@ main.container section.card:first-of-type {
       </div>
     </section>
 
-       <!-- Payment System -->
+    <!-- Payment System -->
     <section class="card" id="payment-system">
       <h2>Payment System</h2>
-      <p>
-        Frayja’s payment system is designed to be as privacy-preserving as its core architecture,
-        offering users flexible, decentralized options that remove traditional barriers.
-      </p>
+      <p>Frayja’s payment system is designed to be as privacy-preserving as its core architecture, offering users flexible, decentralized options that remove traditional barriers.</p>
 
       <h3>⚡ Polygon (MATIC)</h3>
-      <p>
-        Fast, low-fee payments power subscriptions and upgrades, enabling global access without reliance
-        on banking infrastructure. Polygon’s scalability ensures that even microtransactions remain
-        efficient and cost-effective.
-      </p>
+      <p>Fast, low-fee payments power subscriptions and upgrades, enabling global access without reliance on banking infrastructure. Polygon’s scalability ensures that even microtransactions remain efficient and cost-effective.</p>
 
       <h3>🪙 Rune Tokens</h3>
-      <p>
-        Community staking unlocks premium features, governance participation, and early access. With no
-        KYC or centralized account management, Rune Tokens embody Frayja’s commitment to user sovereignty
-        and community-driven growth.
-      </p>
+      <p>Community staking unlocks premium features, governance participation, and early access. With no KYC or centralized account management, Rune Tokens embody Frayja’s commitment to user sovereignty and community-driven growth.</p>
 
       <h3>🔐 NFT-Powered Access Control</h3>
       <p>Frayja also introduces blockchain-based passes on Polygon:</p>
       <ul class="list">
-        <li><strong>Minting:</strong> Secure Transfer Passes are issued as NFTs, embedded with metadata
-          such as expiry, usage count, and branding.</li>
-        <li><strong>Transfer:</strong> Delivered to user wallets with negligible transaction costs, each
-          pass remains traceable and auditable.</li>
-        <li><strong>Redemption:</strong> When initiating a secure transfer, Frayja checks for the NFT to
-          unlock premium bandwidth or encrypted storage.</li>
+        <li><strong>Minting:</strong> Secure Transfer Passes are issued as NFTs, embedded with metadata such as expiry, usage count, and branding.</li>
+        <li><strong>Transfer:</strong> Delivered to user wallets with negligible transaction costs, each pass remains traceable and auditable.</li>
+        <li><strong>Redemption:</strong> When initiating a secure transfer, Frayja checks for the NFT to unlock premium bandwidth or encrypted storage.</li>
       </ul>
 
       <h3>🌍 Why It Matters</h3>
       <ul class="list">
         <li><strong>Privacy-first entitlements:</strong> Wallet-based access replaces logins and identity checks.</li>
         <li><strong>Auditable usage:</strong> Every redemption is verifiable, supporting compliance and transparency.</li>
-        <li><strong>Scalable economics:</strong> Low-cost minting and transfers make the model ideal for subscriptions,
-          community onboarding, and global expansion.</li>
+        <li><strong>Scalable economics:</strong> Low-cost minting and transfers make the model ideal for subscriptions, community onboarding, and global expansion.</li>
       </ul>
 
       <div class="quote">
-        Together, Polygon payments, Rune staking, and NFT passes form a payment ecosystem that is fast,
-        auditable, and privacy-first — perfectly aligned with Frayja’s mission.
+        Together, Polygon payments, Rune staking, and NFT passes form a payment ecosystem that is fast, auditable, and privacy-first — perfectly aligned with Frayja’s mission.
       </div>
     </section>
-    
+
     <!-- Personal Directory -->
     <section class="card" id="personal-directory">
       <h2>Personal Directory</h2>
-      <p>
-        Frayja empowers users to build their own verified personal directory. Each entry in the directory
-        is represented by a public key, which can be validated using PKI (Public Key Infrastructure).
-        Over time, this creates a trusted network of verified contacts without relying on centralized
-        servers or third-party identity providers.
-      </p>
+      <p>Frayja empowers users to build their own verified personal directory. Each entry in the directory is represented by a public key, which can be validated using PKI (Public Key Infrastructure). Over time, this creates a trusted network of verified contacts without relying on centralized servers or third-party identity providers.</p>
 
       <ul class="list">
         <li><strong>User-Controlled Entries:</strong> Contacts are added directly by the user, ensuring sovereignty over their directory.</li>
@@ -485,20 +464,14 @@ main.container section.card:first-of-type {
       </ul>
 
       <div class="quote">
-        A verified personal directory strengthens privacy and security by ensuring that every connection
-        is authentic, user-controlled, and free from centralized oversight.
+        A verified personal directory strengthens privacy and security by ensuring that every connection is authentic, user-controlled, and free from centralized oversight.
       </div>
     </section>
 
-        <!-- Privacy-First Communication -->
+    <!-- Privacy-First Communication -->
     <section class="card" id="privacy-first">
       <h2>Privacy-First Communication</h2>
-      <p>
-        Frayja deliberately moves away from the surveillance-driven model where personal data harvesting
-        and user tracking are built into the application. Unlike mainstream platforms that monetize
-        metadata and behavioral patterns, Frayja is designed so that no hidden collection or profiling
-        occurs.
-      </p>
+      <p>Frayja deliberately moves away from the surveillance-driven model where personal data harvesting and user tracking are built into the application. Unlike mainstream platforms that monetize metadata and behavioral patterns, Frayja is designed so that no hidden collection or profiling occurs.</p>
 
       <ul class="list">
         <li><strong>No Data Harvesting:</strong> Frayja does not collect or monetize personal information, ensuring that your communications remain private and sovereign.</li>
@@ -514,11 +487,9 @@ main.container section.card:first-of-type {
       </ul>
 
       <div class="quote">
-        By rejecting data harvesting and enforcing verified connections, Frayja ensures that privacy and
-        trust are not optional features — they are the foundation of communication.
+        By rejecting data harvesting and enforcing verified connections, Frayja ensures that privacy and trust are not optional features — they are the foundation of communication.
       </div>
     </section>
-
 
     <!-- Who Needs Frayja -->
     <section class="card">
@@ -559,37 +530,38 @@ main.container section.card:first-of-type {
       <h2>Conclusion</h2>
       <p>Centralized messaging and email platforms are increasingly risky. Frayja’s decentralized, cryptographically secure, and user-sovereign approach offers a timely solution for those who refuse to compromise on privacy.</p>
     </section>
-
   </main>
-  
-<section id="contact">
-  <h2>Contact Frayja</h2>
-  <form action="https://formspree.io/f/mqardajb" method="POST">
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
-    </div>
 
-    <div class="form-group">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="_replyto" required>
-    </div>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Frayja</h2>
+    <form action="https://formspree.io/f/mqardajb" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" aria-label="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="_replyto" aria-label="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" aria-label="Your Message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-   <!-- Footer with logo -->
+  <!-- Footer with logo -->
   <footer>
-    <img src="images/frayja-logo .png" alt="Frayja Logo" class="logo">
+    <img src="images/frayja-logo .png" alt="Frayja logo" class="logo" loading="lazy">
     <div>&copy; 2025 Frayja. All rights reserved.</div>
+    <nav>
+      <a href="/privacy-policy">Privacy Policy</a> |
+      <a href="/terms">Terms of Service</a> |
+      <a href="/about">About</a>
+    </nav>
   </footer>
 
 </body>
 </html>
-
