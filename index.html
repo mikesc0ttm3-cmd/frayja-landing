@@ -76,7 +76,7 @@
 
     /* Header layout: logo left, fills header height */
     header {
-      background: #140F2B;
+      background: var(--midnight);
       color: var(--signal);
       display: flex;
       align-items: center;
@@ -84,7 +84,8 @@
       height: 300px;
     }
     header img.logo {
-      height: 100%;
+      max-height: 100%;
+      height: auto;
       width: auto;
       margin-right: 1rem;
     }
@@ -280,7 +281,7 @@
 
   <!-- Header with logo -->
   <header>
-    <img src="images/frayja-logo .png" alt="Frayja privacy-first communication logo" class="logo" loading="lazy">
+    <img src="images/frayja-logo.png" alt="Frayja privacy-first communication logo" class="logo" loading="lazy">
     <div class="header-text">
       <h1>Frayja Blog: Privacy-First Communication</h1>
       <p class="subtitle">For the Post-Cloud Era</p>
@@ -302,7 +303,7 @@
       </ul>
       <div class="quote">
         Frayja’s purpose is to empower users to reclaim control, foster trust, and build a future where privacy is the default—not the exception.
-        <!-- img class="wm" src="/frayja-logo .png" alt="Frayja watermark logo" loading="lazy">
+        <img class="wm" src="images/frayja-logo.png" alt="Frayja watermark logo" loading="lazy">
       </div>
     </section>
 
@@ -397,7 +398,6 @@
             </tr>
             <tr>
               <td>Branding/UX</td>
-              <td>Mythic, privacy-first, intuitive</td>
               <td>Simple, privacy-focused</td>
               <td>Professional, privacy-focused</td>
               <td>Technical, less user-friendly</td>
@@ -525,14 +525,13 @@
       <p>Privacy advocates, journalists, human rights organizations, regulated enterprise teams, developers, technologists, NGOs, government agencies, and individual users seeking advanced privacy.</p>
     </section>
 
+    <!-- Single post card -->
     <article class="post-card card">
-      <section class="card">
       <a href="/blog/2025-12-19-update.html">
-      <h3>Progress Update — 2025-12-19</h3>
-      <p>Small, steady progress today: polish, tests, and a bug fix.</p>
+        <h3>Progress Update — 2025-12-19</h3>
+        <p>Small, steady progress today: polish, tests, and a bug fix.</p>
       </a>
       <time datetime="2025-12-19">Dec 19, 2025</time>
-      </section>
     </article>
 
     <!-- Conclusion -->
@@ -541,8 +540,8 @@
       <p>Centralized messaging and email platforms are increasingly risky. Frayja’s decentralized, cryptographically secure, and user-sovereign approach offers a timely solution for those who refuse to compromise on privacy.</p>
     </section>
   </main>
-        
-     <!-- Contact -->
+
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Frayja</h2>
     <form action="https://formspree.io/f/mqardajb" method="POST">
@@ -562,16 +561,15 @@
     </form>
   </section>
 
-
- <footer>
-  <img src="images/frayja-logo .png" alt="Frayja logo" class="logo" loading="lazy">
-  <div>&copy; 2025 Frayja. All rights reserved.</div>
-  <nav>
-    <a href="/privacy-policy.html">Privacy Policy</a> |
-    <a href="/terms.html">Terms of Service</a> |
-    <a href="/about.html">About</a> |
-  </nav>
-</footer>
+  <footer>
+    <img src="images/frayja-logo.png" alt="Frayja logo" class="logo" loading="lazy">
+    <div>&copy; 2025 Frayja. All rights reserved.</div>
+    <nav>
+      <a href="/privacy-policy.html">Privacy Policy</a> |
+      <a href="/terms.html">Terms of Service</a> |
+      <a href="/about.html">About</a>
+    </nav>
+  </footer>
 
 </body>
 </html>
