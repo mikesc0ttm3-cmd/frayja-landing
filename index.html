@@ -1,42 +1,365 @@
-      <!-- Business Model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frayja Blog | Privacy-First Messaging & Secure File Transfer</title>
+  <meta name="description" content="Explore Frayja’s privacy-first blog on secure messaging, metadata-free file transfer, and intentional communication.">
+
+  <!-- Canonical removed for preview -->
+  <!-- <link rel="canonical" href="https://frayja.ai"> -->
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Frayja Blog | Privacy-First Messaging & Secure File Transfer">
+  <meta property="og:description" content="Learn how Frayja protects your privacy with metadata-free communication and secure transfers.">
+  <meta property="og:image" content="images/preview.png">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Frayja">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frayja Blog | Privacy-First Messaging & Secure File Transfer">
+  <meta name="twitter:description" content="Learn how Frayja protects your privacy with metadata-free communication and secure transfers.">
+  <meta name="twitter:image" content="images/preview.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "headline": "Frayja Blog | Privacy-First Messaging & Secure File Transfer",
+    "description": "Explore Frayja’s privacy-first blog on secure messaging, metadata-free file transfer, and intentional communication.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Instanton Ltd",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "images/logo.png"
+      }
+    },
+    "url": "",
+    "image": "images/preview.png"
+  }
+  </script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGSPXJQRDD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KGSPXJQRDD');
+  </script>
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --midnight: #140F2B;
+      --signal:   #C5102E;
+      --rune:     #F4A430;
+      --ice:      #E5E7EB;
+      --cipher:   #3652F6;
+      --white:    #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--ice);
+      color: var(--midnight);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--midnight);
+      color: var(--signal);
+      display: flex;
+      align-items: center;
+      padding: 2rem 2rem;
+      height: 300px;
+    }
+    header img.logo {
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      margin-right: 1rem;
+    }
+    .header-text {
+      flex: 1;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--signal);
+      font-family: 'IBM Plex Sans', sans-serif;
+      letter-spacing: 0.2px;
+    }
+    header p.subtitle {
+      margin: 0.25rem 0 0;
+      color: var(--white);
+      opacity: 0.9;
+    }
+
+    main.container { margin-top: 0; }
+    main.container section.card:first-of-type { margin-top: 0.75rem; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    section.card {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 2rem;
+      margin: 1rem 0;
+      position: relative;
+    }
+    h2 {
+      margin-top: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      color: var(--cipher);
+      letter-spacing: 0.2px;
+    }
+
+    ul.list {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0 0;
+    }
+    ul.list li { margin: 0.5rem 0; }
+    ul.list li strong {
+      color: var(--cipher);
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--ice);
+      margin-top: 1rem;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    caption {
+      caption-side: top;
+      padding: 0.5rem;
+      font-weight: 600;
+      color: #333;
+      text-align: left;
+    }
+    thead th {
+      background: var(--midnight);
+      color: var(--white);
+      text-align: left;
+      padding: 0.75rem;
+      font-weight: 700;
+    }
+    tbody td {
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--ice);
+    }
+    tbody tr:nth-child(even) { background: #F9FAFB; }
+
+    .quote {
+      border-left: 4px solid var(--rune);
+      background: #FFF9F0;
+      padding: 1rem 1rem 1rem 1.25rem;
+      font-style: italic;
+      margin: 1rem 0;
+      position: relative;
+    }
+    .quote .wm {
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      height: 28px;
+      opacity: 0.18;
+    }
+
+    article.post-card.card {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 2rem;
+      margin: 1rem 0;
+    }
+
+    #contact {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: var(--ice);
+      text-align: center;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      header img.logo {
+        height: 60px;
+        margin: 0 0 0.5rem 0;
+      }
+      header h1 { font-size: 1.5rem; }
+      section.card { padding: 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/frayja-logo.png" alt="Frayja privacy-first communication logo" class="logo" loading="lazy">
+    <div class="header-text">
+      <h1>Frayja Blog: Privacy-First Communication</h1>
+      <p class="subtitle">For the Post-Cloud Era</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- PUBLIC CONTENT -->
+    <section class="card">
+      <h2>Vision & Purpose</h2>
+      <p>Frayja is built on the conviction that privacy is a fundamental human right...</p>
+      <ul class="list">
+        <li><strong>Sovereignty by Design:</strong> Frayja leverages decentralized technologies...</li>
+        <li><strong>Privacy for All:</strong> The platform is engineered to prevent metadata exposure...</li>
+        <li><strong>Intuitive Security:</strong> Advanced cryptography and privacy features...</li>
+        <li><strong>Mythic Branding & Community:</strong> Frayja’s mythic branding...</li>
+        <li><strong>Ethical Monetization:</strong> Frayja rejects ad-based models...</li>
+        <li><strong>Global Impact:</strong> Frayja aims to set a new standard...</li>
+      </ul>
+      <div class="quote">
+        Frayja’s purpose is to empower users...
+        <img class="wm" src="images/frayja-logo.png" alt="">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Executive Q&A Highlights</h2>
+      <ul class="list">
+        <li><strong>Why Now?</strong> The shift to a post-cloud era...</li>
+        <li><strong>Usability for All:</strong> Frayja abstracts technical complexity...</li>
+        <li><strong>Desktop-Only Strategy:</strong> Avoids OS-level surveillance...</li>
+        <li><strong>Go-to-Market:</strong> Mythic branding and community-first engagement...</li>
+        <li><strong>Team:</strong> Founder-led with privacy architecture expertise...</li>
+        <li><strong>Business Model:</strong> Freemium, enterprise, white-label...</li>
+      </ul>
+    </section>
+
+    <!-- SUBSCRIPTION WALL -->
+    <div class="subscribe-wall" style="margin:2rem 0; padding:2rem; background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); text-align:center;">
+      <h2>Subscribe to Continue Reading</h2>
+      <p>Frayja is privacy‑first — no tracking, no spam, no ads.</p>
+
+      <form action="subscribe/success.html" method="POST"
+            onsubmit="localStorage.setItem('frayja_subscribed','true')"
+            style="margin-top:1.5rem;">
+        <input type="email" name="email" placeholder="Your email" required
+               style="padding:0.75rem; width:250px; max-width:80%; border:1px solid #ccc; border-radius:6px;">
+        <button type="submit"
+                style="padding:0.75rem 1.25rem; margin-left:0.5rem; background:#3652F6; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          Unlock Full Blog
+        </button>
+      </form>
+
+      <p style="margin-top:1rem; font-size:0.9rem; opacity:0.8;">
+        You can unsubscribe anytime. We never share your data.
+      </p>
+    </div>
+
+    <!-- LOCKED CONTENT -->
+    <div class="locked-content">
+
+      <section class="card">
+        <h2>Key Features</h2>
+        <ul class="list">
+          <li><strong>Decentralized Architecture:</strong> PKI + IPFS</li>
+          <li><strong>No Metadata Exposure:</strong> No phone numbers, no cloud</li>
+          <li><strong>Unified Messaging & File Transfer:</strong> All-in-one</li>
+          <li><strong>Desktop-Only Control:</strong> Full local control</li>
+          <li><strong>Privacy-Preserving Payments:</strong> Polygon, Rune Tokens</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>🏗️ Architecture Overview</h2>
+        <div style="display:flex; flex-direction:column; align-items:center; margin:2em 0;">
+          <img src="frayja-architecture.png" alt="Frayja architecture diagram"
+               loading="lazy"
+               style="max-width:80%; height:auto; border:1px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Competitive Analysis</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Comparison of Frayja vs Signal, Proton Drive, Keybase</caption>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Frayja</th>
+                <th>Signal</th>
+                <th>Proton Drive</th>
+                <th>Keybase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Decentralisation</td><td>Full</td><td>Centralised</td><td>Centralised</td><td>Centralised</td></tr>
+              <tr><td>Metadata Exposure</td><td>Minimal</td><td>Phone number required</td><td>Separated</td><td>Some metadata</td></tr>
+              <tr><td>Unified Platform</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section class="card">
         <h2>Business Model</h2>
         <ul class="list">
-          <li><strong>Personal License (Paid):</strong> Individuals can purchase a personal-use license for secure messaging and file transfer, with full access to Frayja’s privacy-first features and updates. This option is designed for privacy-conscious users who want robust protection without enterprise complexity.</li>
-          <li><strong>Enterprise Licensing:</strong> Custom deployments for organizations needing sovereign infrastructure and compliance.</li>
-          <li><strong>White-label Solutions:</strong> Tailored branding and integration for privacy-first institutions.</li>
-          <li><strong>Partnerships:</strong> Strategic alliances with NGOs, technology partners, and government agencies.</li>
-          <li><strong>Consulting & Integration:</strong> Professional services for onboarding, compliance, and workflow integration.</li>
+          <li><strong>Personal License:</strong> Paid</li>
+          <li><strong>Enterprise Licensing:</strong> Sovereign deployments</li>
+          <li><strong>White-label Solutions:</strong> Custom branding</li>
+          <li><strong>Partnerships:</strong> NGOs, institutions</li>
         </ul>
-
-        <h3 style="color: var(--cipher); font-family:'IBM Plex Sans', sans-serif; margin-top:1.5rem;">Revenue Allocation (Pre-seed Funding)</h3>
-        <ul class="list">
-          <li>€1 million for technical development</li>
-          <li>€400,000 for branding and content</li>
-          <li>€300,000 for go-to-market and partnerships</li>
-          <li>€300,000 for legal and advisory support</li>
-        </ul>
-
-        <h3 style="color: var(--cipher); font-family:'IBM Plex Sans', sans-serif; margin-top:1.5rem;">Target Customers</h3>
-        <p>Privacy advocates, journalists, human rights organizations, regulated enterprise teams, developers, technologists, NGOs, government agencies, and individual users seeking advanced privacy.</p>
       </section>
 
-      <!-- Single post card -->
       <article class="post-card card">
         <a href="2025-12-19-update.html">
           <h3>Progress Update — 2025-12-19</h3>
-          <p>Small, steady progress today: polish, tests, and a bug fix.</p>
+          <p>Small, steady progress today.</p>
         </a>
         <time datetime="2025-12-19">Dec 19, 2025</time>
       </article>
 
-      <!-- Conclusion -->
       <section class="card">
         <h2>Conclusion</h2>
-        <p>Centralized messaging and email platforms are increasingly risky. Frayja’s decentralized, cryptographically secure, and user-sovereign approach offers a timely solution for those who refuse to compromise on privacy.</p>
+        <p>Centralized messaging and email platforms are increasingly risky...</p>
       </section>
 
-    </div> <!-- LOCKED CONTENT END -->
+    </div> <!-- END LOCKED CONTENT -->
+
   </main>
 
   <!-- Contact -->
@@ -44,16 +367,16 @@
     <h2>Contact Frayja</h2>
     <form action="https://formspree.io/f/mqardajb" method="POST">
       <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" aria-label="Your Name" required>
+        <label>Your Name</label>
+        <input type="text" name="name" required>
       </div>
       <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="_replyto" aria-label="Your Email" required>
+        <label>Your Email</label>
+        <input type="email" name="_replyto" required>
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" aria-label="Your Message" required></textarea>
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
       </div>
       <button type="submit">Send Message</button>
     </form>
@@ -69,7 +392,7 @@
     </nav>
   </footer>
 
-  <!-- FIXED: Correct JS path for preview -->
+  <!-- Correct JS path -->
   <script src="JS/gate.js"></script>
 
 </body>
