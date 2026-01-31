@@ -11,4 +11,3 @@ document.addEventListener("DOMContentLoaded", () => {
     if (wall) wall.style.display = "block";
   }
 });
-
