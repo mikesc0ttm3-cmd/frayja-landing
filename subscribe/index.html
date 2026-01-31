@@ -8,16 +8,15 @@
 <body style="font-family:Inter, sans-serif; max-width:600px; margin:4rem auto; padding:2rem;">
   <h1>Join the Frayja Community</h1>
   <p>Privacy‑first updates. No tracking. No noise.</p>
-
-  <form action="/blog/subscribe/success.html" method="POST"
-        onsubmit="localStorage.setItem('frayja_subscribed','true')"
-        style="margin-top:2rem;">
+  <form action="success.html" method="GET"
+      onsubmit="localStorage.setItem('frayja_subscribed','true')"
+      style="margin-top:2rem;">
     <input type="email" name="email" placeholder="Your email" required
            style="padding:0.75rem; width:100%; border:1px solid #ccc; border-radius:6px;">
     <button type="submit"
             style="margin-top:1rem; padding:0.75rem; width:100%; background:#3652F6; color:#fff; border:none; border-radius:6px;">
       Subscribe
     </button>
-  </form>
+</form>
 </body>
 </html>
