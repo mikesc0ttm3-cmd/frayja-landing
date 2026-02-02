@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frayja Download Ready</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <section class="download-container">
+    <h1>Your download is ready</h1>
+    <p>Click below to download the Frayja desktop app.</p>
+
+    <a class="download-btn"
+       href="http://ec2-18-175-208-245.eu-west-2.compute.amazonaws.com/"
+       download>
+       Download Frayja
+    </a>
+  </section>
+
+  <script>
+    // Block direct access unless unlocked
+    if (localStorage.getItem("frayja_download_unlocked") !== "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
 
