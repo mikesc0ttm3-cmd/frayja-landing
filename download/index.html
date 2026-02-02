@@ -12,19 +12,22 @@
     <h1>Download Frayja</h1>
     <p>Enter your email to unlock the installer.</p>
 
-    <form id="downloadForm" action="https://usebasin.com/f/932b3cd969c0" method="POST">      
+    <form id="downloadForm" action="https://usebasin.com/f/64867" method="POST">
       <input type="email" name="email" placeholder="Email address" required />
       <button type="submit">Unlock Download</button>
     </form>
   </section>
 
   <script>
-    // If user already unlocked, skip straight to success page
-    if (localStorage.getItem("frayja_download_unlocked") === "true") {
+    // Skip the unlock form if the user already subscribed OR already unlocked
+    if (
+      localStorage.getItem("frayja_subscribed") === "true" ||
+      localStorage.getItem("frayja_download_unlocked") === "true"
+    ) {
       window.location.href = "success.html";
     }
 
-    // After form submission, Formspree redirects to success.html
+    // When the unlock form is submitted, mark download as unlocked
     document.getElementById("downloadForm").addEventListener("submit", () => {
       localStorage.setItem("frayja_download_unlocked", "true");
     });
@@ -32,4 +35,3 @@
 
 </body>
 </html>
-
