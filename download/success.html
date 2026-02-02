@@ -20,11 +20,11 @@
   </section>
 
   <script>
-    // Block direct access unless unlocked
-    if (localStorage.getItem("frayja_download_unlocked") !== "true") {
-      window.location.href = "index.html";
-    }
-  </script>
+  // Only block users who have NOT unlocked the download
+  if (localStorage.getItem("frayja_download_unlocked") !== "true") {
+    window.location.href = "index.html";
+  }
+</script>
 
 </body>
 </html>
