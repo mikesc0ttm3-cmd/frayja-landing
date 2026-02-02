@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frayja Download Ready</title>
+  <title>Unlock Frayja Download</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
   <section class="download-container">
-    <h1>Your download is ready</h1>
-    <p>Click below to download the Frayja desktop app.</p>
+    <h1>Download Frayja</h1>
+    <p>Enter your email to unlock the installer.</p>
 
-    <a class="download-btn"
-       href="http://ec2-18-175-208-245.eu-west-2.compute.amazonaws.com/"
-       download>
-       Download Frayja
-    </a>
+    <form id="downloadForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Email address" required />
+      <button type="submit">Unlock Download</button>
+    </form>
   </section>
 
   <script>
-    // Block direct access unless unlocked
-    if (localStorage.getItem("frayja_download_unlocked") !== "true") {
-      window.location.href = "index.html";
+    // If user already unlocked, skip straight to success page
+    if (localStorage.getItem("frayja_download_unlocked") === "true") {
+      window.location.href = "success.html";
     }
+
+    // After form submission, Formspree redirects to success.html
+    document.getElementById("downloadForm").addEventListener("submit", () => {
+      localStorage.setItem("frayja_download_unlocked", "true");
+    });
   </script>
 
 </body>
