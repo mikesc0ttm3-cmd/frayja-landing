@@ -89,13 +89,11 @@
 
 <body>
 
-  <!-- Header -->
   <header class="download-header">
     <h1>Download Frayja</h1>
     <p class="tagline">Private. Encrypted. Yours.</p>
   </header>
 
-  <!-- Download Form -->
   <section class="download-wrapper">
     <div class="download-card">
       <h2>Unlock Your Download</h2>
@@ -117,7 +115,12 @@
   </section>
 
   <script>
-    // If already unlocked, redirect to success page
+    // Set unlock flag immediately when user submits the form
+    document.getElementById("downloadForm").addEventListener("submit", function () {
+      localStorage.setItem("frayja_download_unlocked", "true");
+    });
+
+    // If already unlocked, skip straight to success page
     if (localStorage.getItem("frayja_download_unlocked") === "true") {
       window.location.href = "success.html";
     }
@@ -125,3 +128,4 @@
 
 </body>
 </html>
+
