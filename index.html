@@ -580,6 +580,26 @@
       </section>
 
     </div> <!-- LOCKED CONTENT END -->
+    <script>
+  // After subscribing, reload the page so the wall disappears
+  const form = document.querySelector(".subscribe-wall form")
+  if (form) {
+    form.addEventListener("submit", () => {
+      setTimeout(() => {
+        window.location.reload()
+      }, 300)
+    })
+  }
+</script>
+
+<script>
+  // Hide the wall for returning users
+  if (localStorage.getItem("frayja_subscribed") === "true") {
+    const wall = document.querySelector(".subscribe-wall")
+    if (wall) wall.style.display = "none"
+  }
+</script>
+
   </main>
 
   <!-- Contact (also locked by design, but you can move it outside if you want it public) -->
