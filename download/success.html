@@ -101,7 +101,7 @@
   </section>
 
   <script>
-    // Only allow access if the user has unlocked the download
+    // If user hasn't unlocked, send them back
     if (localStorage.getItem("frayja_download_unlocked") !== "true") {
       window.location.href = "index.html";
     }
@@ -109,3 +109,4 @@
 
 </body>
 </html>
+
