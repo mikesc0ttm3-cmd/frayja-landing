@@ -114,18 +114,22 @@
     </div>
   </section>
 
-  <script>
-    // Set unlock flag immediately when user submits the form
-    document.getElementById("downloadForm").addEventListener("submit", function () {
-      localStorage.setItem("frayja_download_unlocked", "true");
-    });
+ ...
+</section>
 
-    // If already unlocked, skip straight to success page
-    if (localStorage.getItem("frayja_download_unlocked") === "true") {
-      window.location.href = "success.html";
-    }
-  </script>
+<script>
+  // Set unlock flag the moment the user clicks the button
+  document.querySelector(".download-submit").addEventListener("click", function () {
+    localStorage.setItem("frayja_download_unlocked", "true");
+  });
+
+  // If already unlocked, skip straight to success page
+  if (localStorage.getItem("frayja_download_unlocked") === "true") {
+    window.location.href = "success.html";
+  }
+</script>
 
 </body>
 </html>
+
 
