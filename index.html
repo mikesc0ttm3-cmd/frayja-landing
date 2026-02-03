@@ -324,19 +324,32 @@
       </ul>
     </section>
 
-    <!-- SUBSCRIPTION WALL -->
-    <div class="subscribe-wall" style="margin:2rem 0; padding:2rem; background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); text-align:center;">
-      <h2>Subscribe to Continue Reading</h2>
-      <p>Frayja is privacy‑first — no tracking, no spam, no ads. Just intentional communication.</p>
+   <!-- SUBSCRIPTION WALL -->
+<div class="subscribe-wall" style="margin:2rem 0; padding:2rem; background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); text-align:center;">
+  <h2>Subscribe to Continue Reading</h2>
+  <p>Frayja is privacy‑first — no tracking, no spam, no ads. Just intentional communication.</p>
 
-      <form action="subscribe/" method="GET" style="margin-top:1.5rem;">
-        <input type="email" name="email" placeholder="Your email" required
-               style="padding:0.75rem; width:250px; max-width:80%; border:1px solid #ccc; border-radius:6px;">
-        <button type="submit"
-                style="padding:0.75rem 1.25rem; margin-left:0.5rem; background:#3652F6; color:#fff; border:none; border-radius:6px; cursor:pointer;">
-          Unlock Full Blog
-        </button>
-      </form>
+  <form action="https://usebasin.com/f/e6c33d7eb854" method="POST"
+        onsubmit="localStorage.setItem('frayja_subscribed','true')"
+        style="margin-top:1.5rem;">
+    <input type="email" name="email" placeholder="Your email" required
+           style="padding:0.75rem; width:250px; max-width:80%; border:1px solid #ccc; border-radius:6px;">
+    <button type="submit"
+            style="padding:0.75rem 1.25rem; margin-left:0.5rem; background:#3652F6; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+      Unlock Full Blog
+    </button>
+  </form>
+
+  <script>
+    // After subscribing, reload the page so the wall disappears
+    document.querySelector(".subscribe-wall form").addEventListener("submit", () => {
+      setTimeout(() => {
+        window.location.reload()
+      }, 300)
+    })
+  </script>
+</div>
+
 
       <p style="margin-top:1rem; font-size:0.9rem; opacity:0.8;">
         You can unsubscribe anytime. We never share your data.
