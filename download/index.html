@@ -12,20 +12,22 @@
     <h1>Download Frayja</h1>
     <p>Enter your email to unlock the installer.</p>
    
-      <form id="downloadForm" action="https://usebasin.com/f/932b3cd969c0" method="POST">
+    <form id="downloadForm" action="https://usebasin.com/f/932b3cd969c0" method="POST">
       <input type="email" name="email" placeholder="Email address" required />
       <button type="submit">Unlock Download</button>
     </form>
   </section>
 
   <script>
-    // Skip the unlock form if the user already subscribed OR already unlocked
-    if (
-      localStorage.getItem("frayja_subscribed") === "true" ||
-      localStorage.getItem("frayja_download_unlocked") === "true"
-    ) {
-      window.location.href = "success.html";
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const subscribed = localStorage.getItem("frayja_subscribed") === "true";
+      const unlocked = localStorage.getItem("frayja_download_unlocked") === "true";
+
+      // Only skip the form if the user is subscribed AND already unlocked
+      if (subscribed && unlocked) {
+        window.location.href = "success.html";
+      }
+    });
 
     // When the unlock form is submitted, mark download as unlocked
     document.getElementById("downloadForm").addEventListener("submit", () => {
