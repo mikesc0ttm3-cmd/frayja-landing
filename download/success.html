@@ -5,22 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frayja Download Ready</title>
   <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    .success-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 4rem 1rem;
+    }
+
+    .success-card {
+      max-width: 420px;
+      width: 100%;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .success-card h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .success-card .subtitle {
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #3652F6;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background: #2d45d1;
+    }
+
+    .privacy-note {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-  <section class="download-container">
-    <h1>Your download is ready</h1>
-    <p>Click below to download the Frayja desktop app.</p>
+  <section class="success-wrapper">
+    <div class="success-card">
+      <h1>Your download is ready</h1>
+      <p class="subtitle">Click below to download the Frayja desktop app.</p>
 
-    <a class="download-btn"
-       href="http://ec2-18-175-208-245.eu-west-2.compute.amazonaws.com/"
-       download>
-       Download Frayja
-    </a>
+      <a class="download-btn"
+         href="http://ec2-18-175-208-245.eu-west-2.compute.amazonaws.com/"
+         download>
+         Download Frayja
+      </a>
+
+      <p class="privacy-note">No tracking. No analytics. Just your download.</p>
+    </div>
   </section>
 
   <script>
-    // Only block users who have NOT unlocked the download
+    // Only allow access if the user has unlocked the download
     if (localStorage.getItem("frayja_download_unlocked") !== "true") {
       window.location.href = "index.html";
     }
@@ -28,4 +83,5 @@
 
 </body>
 </html>
+
 
