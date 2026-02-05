@@ -99,13 +99,16 @@
       <p class="privacy-note">No tracking. No analytics. Just your download.</p>
     </div>
   </section>
+  
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const redirect = params.get("redirect");
 
-  <script>
-    // If user hasn't unlocked, send them back
-    if (localStorage.getItem("frayja_download_unlocked") !== "true") {
-      window.location.href = "index.html";
-    }
-  </script>
+  // If subscribed and redirect exists, go to the article
+  if (localStorage.getItem("frayja_subscribed") === "true" && redirect) {
+    window.location.href = redirect;
+  }
+</script>
 
 </body>
 </html>
