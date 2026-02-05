@@ -89,6 +89,18 @@
 
 <body>
 
+  <!-- ⭐ AUTO‑REDIRECT IF ALREADY SUBSCRIBED -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get("redirect");
+
+    if (localStorage.getItem("frayja_subscribed") === "true") {
+      if (redirect) {
+        window.location.href = redirect;
+      }
+    }
+  </script>
+
   <header class="download-header">
     <h1>Download Frayja</h1>
     <p class="tagline">Private. Encrypted. Yours.</p>
@@ -99,7 +111,8 @@
       <h2>Unlock Your Download</h2>
       <p class="subtitle">Enter your email to access the Frayja desktop app.</p>
 
-      <form id="downloadForm" action="https://usebasin.com/f/932b3cd969c0" method="POST">
+      <form id="downloadForm" action="https://usebasin.com/f/932b3cd969c0" method="POST"
+            onsubmit="localStorage.setItem('frayja_subscribed','true')">
         <input 
           type="email" 
           name="email" 
@@ -114,22 +127,5 @@
     </div>
   </section>
 
- ...
-</section>
-
-<script>
-  // Set unlock flag the moment the user clicks the button
-  document.querySelector(".download-submit").addEventListener("click", function () {
-    localStorage.setItem("frayja_download_unlocked", "true");
-  });
-
-  // If already unlocked, skip straight to success page
-  if (localStorage.getItem("frayja_download_unlocked") === "true") {
-    window.location.href = "success.html";
-  }
-</script>
-
 </body>
 </html>
-
-
