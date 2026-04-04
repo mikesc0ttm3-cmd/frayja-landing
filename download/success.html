@@ -96,7 +96,7 @@
          download="frayjavault Setup 1.0.0.exe">
         Download Frayja Vault Setup (Windows x64)
       </a>
-
+<button onclick="downloadFile()">Download Now</button>
       <p class="privacy-note">No tracking. No analytics. Just your download.</p>
     </div>
   </section>
@@ -111,6 +111,20 @@
   }
 </script>
 
+      <script>
+        function downloadFile() {
+            const downloadUrl = "https://frayja.dev.vivetware.com/download?platform=windows&arch=x86_64&version=3.0.0";
+            const filename = "frayjavault Setup 1.0.0.exe";   // You can change this if needed
+
+            // Create a hidden link and trigger download
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = filename;     // This suggests the filename to the browser
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
 
