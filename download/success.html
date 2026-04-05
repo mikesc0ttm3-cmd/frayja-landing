@@ -10,12 +10,13 @@
     body {
       background: #f5f7fa;
       font-family: system-ui, sans-serif;
+      margin: 0;
     }
 
+    /* Header */
     .success-header {
       text-align: center;
-      padding-top: 3rem;
-      padding-bottom: 1rem;
+      padding: 3rem 1rem 1rem;
     }
 
     .success-header h1 {
@@ -23,11 +24,12 @@
       margin-bottom: 0.3rem;
     }
 
-    .success-header .tagline {
+    .tagline {
       font-size: 1.1rem;
       color: #666;
     }
 
+    /* Layout */
     .success-wrapper {
       display: flex;
       justify-content: center;
@@ -37,7 +39,7 @@
     .success-card {
       max-width: 420px;
       width: 100%;
-      background: #ffffff;
+      background: #fff;
       padding: 2.5rem;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -49,23 +51,24 @@
       margin-bottom: 0.5rem;
     }
 
-    .success-card .subtitle {
+    .subtitle {
       color: #555;
       margin-bottom: 2rem;
     }
 
+    /* Button */
     .download-btn {
       width: 100%;
       padding: 0.9rem 1rem;
       background: #3652F6;
       color: #fff;
-      border: none;
       border-radius: 8px;
       font-size: 1rem;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
       cursor: pointer;
-      text-decoration:none;
-      
+      transition: background 0.2s ease;
     }
 
     .download-btn:hover {
@@ -92,21 +95,18 @@
       <h2>Your download is ready</h2>
       <p class="subtitle">Click below to download the Frayja desktop app.</p>
 
-        <a class="download-btn"
-          href="#" 
-           onclick="startDownload(event)" >
-            Download Frayja Vault for Windows
-        </a>
-      
+      <a class="download-btn" href="#" onclick="startDownload(event)">
+        Download Frayja Vault for Windows
+      </a>
+
       <p class="privacy-note">No tracking. No analytics. Just your download.</p>
     </div>
   </section>
-  
+
 <script>
   const params = new URLSearchParams(window.location.search);
   const redirect = params.get("redirect");
 
-  // If subscribed and redirect exists, go to the article
   if (localStorage.getItem("frayja_subscribed") === "true" && redirect) {
     window.location.href = redirect;
   }
@@ -114,35 +114,32 @@
 
 <script>
   async function startDownload(e) {
-    e.preventDefault();   // Stop normal link behavior
+    e.preventDefault();
 
     const apiUrl = "https://frayja.dev.vivetware.com/download?platform=windows&arch=x86_64&version=3.0.0";
 
     try {
-        // Step 1: Get the real S3 presigned URL from your API
-        const response = await fetch(apiUrl);
-        const s3Url = await response.text();   // This gets the long Amazon URL you showed
+      const response = await fetch(apiUrl);
+      const s3Url = await response.text();
 
-        if (!s3Url || !s3Url.startsWith('http')) {
-            alert("Failed to get download link");
-            return;
-        }
+      if (!s3Url || !s3Url.startsWith("http")) {
+        alert("Failed to get download link");
+        return;
+      }
 
-        // Step 2: Trigger the actual download with nice filename
-        const link = document.createElement('a');
-        link.href = s3Url.trim();
-        link.download = "frayjavault Setup 1.0.0.exe";   // Clean filename
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+      const link = document.createElement("a");
+      link.href = s3Url.trim();
+      link.download = "frayjavault Setup 1.0.0.exe";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
     } catch (err) {
-        console.error(err);
-        alert("Download failed. Please try again.");
+      console.error(err);
+      alert("Download failed. Please try again.");
     }
-}
+  }
 </script>
 
 </body>
 </html>
-
