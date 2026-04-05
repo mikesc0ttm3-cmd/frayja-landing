@@ -90,18 +90,12 @@
       <h2>Your download is ready</h2>
       <p class="subtitle">Click below to download the Frayja desktop app.</p>
 
-     
-      <a class="download-btn"
-        href="https://frayja.dev.vivetware.com/download?platform=windows&arch=x86_64&version=3.0.0" 
-         download="frayjavault Setup 1.0.0.exe">
-        Download Frayja Vault Setup (Windows x64)
-      </a>
-
-<a href="#" 
-   onclick="startDownload(event)" 
-   style="padding: 15px 32px; background-color: #007bff; color: white; text-decoration: none; border-radius: 6px; font-size: 17px; display: inline-block;">
-    Download Frayja Vault for Windows
-</a>
+        <a class="download-btn"
+          href="#" 
+           onclick="startDownload(event)" 
+           style="padding: 15px 32px; background-color: #007bff; color: white; text-decoration: none; border-radius: 6px; font-size: 17px; display: inline-block;">
+            Download Frayja Vault for Windows
+        </a>
       
       <p class="privacy-note">No tracking. No analytics. Just your download.</p>
     </div>
@@ -118,7 +112,7 @@
 </script>
 
 <script>
-async function startDownload(e) {
+  async function startDownload(e) {
     e.preventDefault();   // Stop normal link behavior
 
     const apiUrl = "https://frayja.dev.vivetware.com/download?platform=windows&arch=x86_64&version=3.0.0";
